@@ -12,8 +12,16 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('tag_thread', function (Blueprint $table) {
+            
             $table->id();
-            $table->timestamps();
+            
+            $table->unsignedBigInteger('tag_id');
+            $table->foreign('tag_id')->references('id')->on('tags')->onUpdate('cascade')->onDelete('cascade');
+
+            $table->unsignedBigInteger('thread_id');
+            $table->foreign('thread_id')->references('id')->on('threads')->onUpdate('cascade')->onDelete('cascade');
+
+
         });
     }
 
