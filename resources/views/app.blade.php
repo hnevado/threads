@@ -4,15 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title')</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.bunny.net">
+    <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
+
+    @vite('resources/css/app.css')
 </head>
 <body>
-    <div>
-        <h2>@yield('title')</h2>
-        <p>@yield('description')</p>
+  
+  <div class="bg-gray-200 py-16">
+    <div class="container px-4 mx-auto">
+        <h2 class="text-6xl mb-4">
+            @yield('title')
+        </h2>
+        <p class="text-lg font-light leading-loose mx-w-3xl">@yield('description')</p>
     </div>
+  </div>
 
-    <div>
+
+  <div class="container px-4 mx-auto mt-12">
         @yield('content')
-    </div>
+  </div>
+
 </body>
 </html>

@@ -5,7 +5,7 @@
 
 @section('content')
 
-Esta es la página principal
+<span class="font-bold">Esta es la página principal</span>
 
 
 @endsection
