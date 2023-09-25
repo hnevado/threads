@@ -9,23 +9,23 @@ class PageController extends Controller
     public function home()
     {
 
-        return 'home';
+        return view('home');
 
     }
 
     public function category($category)
     {
-        return "Categoria ".$category;
+        return view('category',['category' => $category]);
     }
 
     public function tag($tag)
     {
-        return "Tag ".$tag;
+        return view('tag', ['tag' => $tag]);
     }
 
     public function thread($thread)
     {
-        return "Thread ".$thread;
+        return view('thread', ['thread' => $thread]);
     }
 
 
