@@ -2,13 +2,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Thread;
 
 class PageController extends Controller
 {
     public function home()
     {
-
-        return view('home');
+        $threads = Thread::latest()->orderBy('id','DESC')->paginate();
+        return view('home', ['threads' => $threads]);
 
     }
 
