@@ -3,6 +3,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Thread;
+use App\Models\Category;
+use App\Models\Tag;
 
 class PageController extends Controller
 {
@@ -13,14 +15,16 @@ class PageController extends Controller
 
     }
 
-    public function category($category)
+    public function category(Category $category)
     {
-        return view('category',['category' => $category]);
+        $threads = $category->threads()->orderBy('id','DESC')->paginate();
+        return view('category',['category' => $category, 'threads' => $threads]);
     }
 
-    public function tag($tag)
+    public function tag(Tag $tag)
     {
-        return view('tag', ['tag' => $tag]);
+        $threads = $tag->threads()->orderBy('id','DESC')->paginate();
+        return view('tag', ['tag' => $tag, 'threads' => $threads]);
     }
 
     public function thread($thread)
