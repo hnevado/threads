@@ -27,8 +27,9 @@ class PageController extends Controller
         return view('tag', ['tag' => $tag, 'threads' => $threads]);
     }
 
-    public function thread($thread)
+    public function thread(Thread $thread)
     {
+    
         return view('thread', ['thread' => $thread]);
     }
 

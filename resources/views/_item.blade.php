@@ -38,7 +38,7 @@
 
         <div class="mt-2 text-right">
 
-            <a class="text-indigo-600 mr-2" href="#">
+            <a class="text-indigo-600 mr-2" href="{{route('page.thread', $thread->slug) }}">
               Ver &rarr;
             </a>
 

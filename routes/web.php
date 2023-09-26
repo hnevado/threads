@@ -22,6 +22,6 @@ Route::get('/',[PageController::class,'home'])->name('home');
 
 Route::get('/categoria/{category:slug}',[PageController::class,'category'])->name('page.category');
 Route::get('/etiqueta/{tag:slug}',[PageController::class,'tag'])->name('page.tag');
-Route::get('/hilo/{thread}',[PageController::class,'thread'])->name('page.thread');
+Route::get('/hilo/{thread:slug}',[PageController::class,'thread'])->name('page.thread');
 
 require __DIR__.'/auth.php';
