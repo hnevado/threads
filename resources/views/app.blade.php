@@ -14,6 +14,11 @@
   
   <div class="bg-gray-200 py-16">
     <div class="container px-4 mx-auto">
+       @if(request()->routeIs(['page.category', 'page.tag','page.thread']))
+
+        <div class="mb-6"><a href="{{ route('home') }}"> &lt; VOLVER AL HOME</a></div>
+
+       @endif
         <h2 class="text-6xl mb-4">
             @yield('title')
         </h2>
