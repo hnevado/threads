@@ -31,7 +31,9 @@ class PageController extends Controller
     public function thread(Thread $thread)
     {
     
-        return view('thread', ['thread' => $thread]);
+        //$comments = $thread->comments()->orderBy('id','DESC')->with('user')->get();
+        $comments = $thread->comments()->orderBy('id','DESC')->get();
+        return view('thread', ['thread' => $thread, 'comments' => $comments]);
     }
 
 

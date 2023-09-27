@@ -17,10 +17,10 @@
       @endforeach
 </div>
 
-<h2 class="text-3xl my-8"> {{$thread->comments->count()}} comentarios</h2>
+<h2 class="text-3xl my-8"> {{$comments->count()}} comentarios</h2>
 
 
-@foreach ($thread->comments as $comment)
+@foreach ($comments as $comment)
 
 <div class="w-full">
   <div class="flex items-center text-bold">
