@@ -10,6 +10,7 @@ class PageController extends Controller
 {
     public function home()
     {
+        //$threads = Thread::latest()->orderBy('id','DESC')->with('category','tags','user')->withCount('comments')->paginate();
         $threads = Thread::latest()->orderBy('id','DESC')->paginate();
         return view('home', ['threads' => $threads]);
 

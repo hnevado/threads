@@ -19,9 +19,11 @@
         <div class="mb-6"><a href="{{ route('home') }}"> &lt; VOLVER AL HOME</a></div>
 
        @endif
+
         <h2 class="text-6xl mb-4">
             @yield('title')
         </h2>
+        
         <p class="text-lg font-light leading-loose mx-w-3xl">@yield('description')</p>
     </div>
   </div>

@@ -31,7 +31,7 @@
         <div class="mt-2">
 
             <span class="text-xs">
-              {{$thread->comments->count()}} comentarios
+              {{$thread->comments_count}} comentarios
             </span>
 
         </div>

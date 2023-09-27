@@ -9,6 +9,9 @@ class Thread extends Model
 {
     use HasFactory;
 
+    protected $with = ['category','tags','user'];
+    protected $withCount = ['comments'];
+
     public function comments()
     {
         return $this->hasMany(Comment::class);
