@@ -8,7 +8,7 @@
 </p>
 
 <h2>Threads | Laravel 10</h2>
-<p>Aplicación hecha con Laravel 10 a modo de foro que contiene preguntas, respuestas, categorías y etiquetas. En construcción la parte del dashboard.</p>
+<p>Aplicación hecha con Laravel 10 a modo de foro que contiene preguntas, respuestas, categorías y etiquetas. TODO: Dashboard.</p>
 
 <p><img src="https://github.com/hnevado/threads/blob/master/public/img/imagen1.png"></p>
 <p><img src="https://github.com/hnevado/threads/blob/master/public/img/imagen2.png"></p>
